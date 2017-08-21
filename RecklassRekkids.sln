@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainRepository", "Reposit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemDataLayer", "FileSystemDataLayer\FileSystemDataLayer.csproj", "{3096AE84-3BB6-4E6C-8445-2D5F2785ADC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{679EFA9F-5C4D-4AF2-A41E-D492160AF30D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3096AE84-3BB6-4E6C-8445-2D5F2785ADC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3096AE84-3BB6-4E6C-8445-2D5F2785ADC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3096AE84-3BB6-4E6C-8445-2D5F2785ADC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679EFA9F-5C4D-4AF2-A41E-D492160AF30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679EFA9F-5C4D-4AF2-A41E-D492160AF30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679EFA9F-5C4D-4AF2-A41E-D492160AF30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679EFA9F-5C4D-4AF2-A41E-D492160AF30D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,30 +36,15 @@ namespace RecklassRekkids.DomainRepository.Mappers
 							uses.Add(use);
 						}
 					}
-					if (!DateTime.TryParseExact(
-						musicData["StartDate"]
-						.Replace("st","")
-						.Replace("th","")
-						.Replace("June", "Jun"),
-						"dMMMyyyy",
-						DateTimeFormatInfo.InvariantInfo,
-						DateTimeStyles.None,
-						out DateTime startDate))
-					continue;
 
+					if (!musicData["StartDate"].TryParseFromAnyDate(out DateTime startDate)) continue;
 					DateTime? endDate = null;
 					if (musicData.Count > 4 && musicData.ContainsKey("EndDate") && musicData["EndDate"] != null)
 					{
-						if (DateTime.TryParseExact(
-							musicData["EndDate"]
-							.Replace("st", "")
-							.Replace("th", "")
-							.Replace("June", "Jun"),
-							"dMMMyyyy",
-							DateTimeFormatInfo.InvariantInfo,
-							DateTimeStyles.None,
-							out DateTime endDate2))
-						endDate = endDate2;
+						if (musicData["EndDate"].TryParseFromAnyDate(out DateTime endDate2))
+						{
+							endDate = endDate2;
+						}
 					}
 
 					var musicContract = new MusicContract(artist, title, uses, startDate, endDate);

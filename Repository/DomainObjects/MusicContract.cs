@@ -29,5 +29,18 @@ namespace RecklassRekkids.DomainRepository.DomainObjects
 		public DateTime StartDate { get; set; }
 
 		public DateTime? EndDate { get; set; }
+
+		public override string ToString()
+		{
+			var output = $"{Artist.Name} | {MusicTitle.Name} | ({getDistributionString()} | {StartDate.Date} | {EndDate})";
+			return output;
+		}
+
+		private string getDistributionString()
+		{
+			var uses = new List<string>();
+			foreach(DistributionUse use in DistributionUsages) uses.Add(use.ToString());
+			return String.Join(",", uses);
+		}
 	}
 }

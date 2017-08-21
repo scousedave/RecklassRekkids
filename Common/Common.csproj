@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="DistributionUseEnum.cs" />
+    <Compile Include="IContractManager.cs" />
     <Compile Include="Interfaces\DomainObjects\IArtist.cs" />
     <Compile Include="Interfaces\DomainObjects\IBusinessContract.cs" />
     <Compile Include="Interfaces\IDataProducer.cs" />
